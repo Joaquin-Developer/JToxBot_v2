@@ -5,10 +5,10 @@ Comandos para ejecutar:
 
 En entorno de producción:
 ```bash
-npm start
+npm run start
 ```
 
 En entorno de desarrollo:
 ```bash
-npm dev
+npm run dev
 ```
