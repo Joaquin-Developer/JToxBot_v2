@@ -14,6 +14,10 @@ functions.importe = (text) => {
 
     for (let data of text) {
         let price = parseFloat(data.split("-")[0])
+        if (isNaN(price)) {
+            return global.ERR_MESSAGES.CONSTANT_ERR_COMMAND
+        }
+
         let name = data.split("-")[1]
         resp += `- ${name} -> ${parseFloat(price)}\n`
         importeValue += price

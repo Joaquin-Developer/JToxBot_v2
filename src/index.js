@@ -1,6 +1,7 @@
 const config = require("../config")
 const { Telegraf } = require('telegraf')
 const botEvents = require("./controllers/BotEventsHandler")
+global.ERR_MESSAGES = config.ERR_MESSAGES
 
 const bot = new Telegraf(config.bot.TELEGRAM_TOKEN)
 

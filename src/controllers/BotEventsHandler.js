@@ -14,6 +14,12 @@ class BotEventsHandler {
         let text = message.split("\n")
         // me quedo solo con el texto, quito el comando
         text.shift()
+
+        if (!text.length) {
+            ctx.reply(global.ERR_MESSAGES.CONSTANT_ERR_COMMAND)
+            return
+        }
+
         ctx.reply(functions.importe(text))
     }
 
