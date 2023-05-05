@@ -20,6 +20,11 @@ class BotEventsHandler {
     static help(ctx) {
         ctx.reply(functions.help())
     }
+
+    static hearsHandle(ctx) {
+        const username = ctx.message.from.first_name
+        ctx.reply(`Holis ${username} :)\nPara saber como usarme escribí /help`)
+    }
 }
 
 module.exports = BotEventsHandler
