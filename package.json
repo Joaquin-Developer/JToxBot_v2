@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "telegraf": "^4.12.2"
+  },
+  "name": "jtoxbot_v2",
+  "version": "1.0.0",
+  "main": "main.js",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joaquin-Developer/JToxBot_v2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joaquin-Developer/JToxBot_v2/issues"
+  },
+  "homepage": "https://github.com/Joaquin-Developer/JToxBot_v2#readme",
+  "description": ""
+}
