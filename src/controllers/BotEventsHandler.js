@@ -16,6 +16,10 @@ class BotEventsHandler {
         text.shift()
         ctx.reply(functions.importe(text))
     }
+
+    static help(ctx) {
+        ctx.reply(functions.help())
+    }
 }
 
 module.exports = BotEventsHandler
