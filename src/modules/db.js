@@ -76,8 +76,4 @@ dbFunctions.getLastListaCompras = async (userId) => {
 }
 
 
-
-
-
-
 module.exports = dbFunctions
