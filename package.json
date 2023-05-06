@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "mongodb": "^5.4.0",
     "telegraf": "^4.12.2"
   },
   "name": "jtoxbot_v2",

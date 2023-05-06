@@ -2,6 +2,11 @@
  * Logica de cada funcionalidad del bot
  */
 
+const dbController = require("./db")
+
+
+class MongoDBInsertError extends Error { }
+
 
 const functions = {}
 
@@ -49,6 +54,29 @@ Es importante que dejes un salto de línea entre el comando y los valores, y que
 
 Tox.
     `
+}
+
+
+functions.savePossibleShopListForSuper = async (productsList, userId) => {
+    try {
+        const insertedResult = await dbController.insertOne({
+            "ID_USUARIO": userId,
+            "REGISTRO_ACTIVO": true,
+            "LISTA_COMPRAS": productsList,
+            "DATE_COMPRA": new Date()
+        })
+        console.log(`Documento insertado con éxito. ID: ${insertedResult}`)
+
+    } catch (error) {
+        console.log(`Error al insertar el documento: ${err}`)
+        throw MongoDBInsertError("Error al insertar")
+    }
+}
+
+
+functions.getLastListaCompras = async (userId) => {
+    const result = await dbController.getLastListaCompras(userId)
+    return result
 }
 
 

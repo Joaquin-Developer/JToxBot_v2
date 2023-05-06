@@ -31,6 +31,32 @@ class BotEventsHandler {
         const username = ctx.message.from.first_name
         ctx.reply(`Holis ${username} :)\nPara saber como usarme escribí /help`)
     }
+
+    static async possibleShopListForSuper(ctx) {
+        const userId = ctx.message.from.id
+        const list = ctx.message.text.split("\n")
+        list.shift()
+        console.log(list)
+        try {
+            await functions.savePossibleShopListForSuper(list, userId)
+            ctx.reply("Se agregó el registro!")
+        } catch (error) {
+            ctx.reply("¡Ups! Se produjo un error interno del servidor")
+        }
+
+    }
+
+    static async getLastListaCompras(ctx) {
+        const userId = ctx.message.from.id
+        try {
+            const result = await functions.getLastListaCompras(userId)
+            console.log(result)
+
+            ctx.reply("Lista:\n" + result.toString().replaceAll(",", "\n"))
+        } catch (error) {
+            ctx.reply("¡Ups! Se produjo un error interno del servidor")
+        }
+    }
 }
 
 module.exports = BotEventsHandler
