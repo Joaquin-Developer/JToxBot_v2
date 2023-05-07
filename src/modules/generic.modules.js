@@ -54,7 +54,7 @@ functions.savePossibleShopListForSuper = async (productsList, userId) => {
 
     } catch (error) {
         console.log(`Error al insertar el documento: ${err}`)
-        throw MongoDBInsertError("Error al insertar")
+        throw new MongoDBInsertError("Error al insertar")
     }
 }
 
