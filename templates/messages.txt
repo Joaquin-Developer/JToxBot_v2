@@ -11,6 +11,7 @@ Ejemplo de úso:
 500 - Carne
 
 /preCompra
+completar...
 
 
 Es importante que dejes un salto de línea entre el comando y los valores, y que separes el precio del nombre con un -

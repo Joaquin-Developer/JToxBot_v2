@@ -36,26 +36,9 @@ functions.importe = (text) => {
 
 }
 
-// Mejorar esto: ver de crear un .cfg para estos datos de texto plano con formato
-// y no enchastrar el modulo de fuciones
+
 functions.help = () => {
-    return `
-¡Hola! Soy Tox, y estoy para servirte.
-
-Como esta es mi versión 2.0, y mi creador tiene poco tiempo libre, solo tengo una funcion (por ahora).
-/importe -> con este comando, me puedes pasar una lista de compras con su precio, y te calculo el importe total.
-Ejemplo de úso:
-
-/importe
-25 - Alfajor
-12.4 - Manzana
-500 - Carne
-
-Es importante que dejes un salto de línea entre el comando y los valores, y que separes el precio del nombre con un -
-
-Tox.
-    `
-    // return utils.readHelpTemplate()
+    return utils.readHelpTemplate()
 }
 
 
