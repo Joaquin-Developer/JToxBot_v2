@@ -3,6 +3,7 @@
  */
 
 const dbController = require("./db")
+const utils = require("../utils/utils")
 
 
 class MongoDBInsertError extends Error { }
@@ -54,6 +55,7 @@ Es importante que dejes un salto de línea entre el comando y los valores, y que
 
 Tox.
     `
+    // return utils.readHelpTemplate()
 }
 
 
