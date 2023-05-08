@@ -3,11 +3,8 @@
  */
 
 const dbController = require("./db")
+const { MongoDBInsertError } = require("../exceptions/exceptions")
 const utils = require("../utils/utils")
-
-
-class MongoDBInsertError extends Error { }
-
 
 const functions = {}
 
